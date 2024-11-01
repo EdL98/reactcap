@@ -6,7 +6,7 @@ import Health from './Pages/health';
 import Home from './Pages/home';
 import Table from './Pages/table';
 import WaterDashboard from './Pages/waterdashboard';
-
+//pascal letter (uppercase initial letters of each word)
 function App() {
   return (
     <BrowserRouter>

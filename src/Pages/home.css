@@ -1,0 +1,37 @@
+
+h1 {
+    margin:0 auto;
+    text-align:center;
+}
+h2{
+    margin:0 auto;
+    text-align:Center;
+}
+h3{
+   margin:0 auto;
+    text-align:Center; 
+}
+h4{
+   margin:0 auto;
+    text-align:left; 
+}
+
+.newdiv {
+    border:5px outset black;
+    background-color: lightblue;
+    text-align:left;
+}
+.secdiv{
+    border:5px outset black;
+    background-color: rgb(230, 173, 213);
+    text-align:left; 
+}
+.container {
+display: flex;
+align-items: "";
+}
+
+.container figure, .container p {
+margin-right: 15px;
+}
+
