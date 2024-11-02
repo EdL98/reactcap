@@ -10,6 +10,7 @@ import WaterDashboard from './Pages/waterdashboard';
 function App() {
   return (
     <BrowserRouter>
+      
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/home">
           <b>Smart Water Meter</b>
@@ -70,6 +71,7 @@ function App() {
       </nav>
 
       <Routes>
+        <Route index element={<Home />} /> 
         <Route path="/home" element={<Home />} />
         <Route path="/waterdashboard" element={<WaterDashboard />} />
         <Route path="/health" element={<Health />} />
