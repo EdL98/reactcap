@@ -6,6 +6,8 @@ import Health from './Pages/health';
 import Home from './Pages/home';
 import Table from './Pages/table';
 import WaterDashboard from './Pages/waterdashboard';
+import NotFound from './Pages/notfound';
+
 //pascal letter (uppercase initial letters of each word)
 function App() {
   return (
@@ -77,6 +79,7 @@ function App() {
         <Route path="/health" element={<Health />} />
         <Route path="/table" element={<Table />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
   );
