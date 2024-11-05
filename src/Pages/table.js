@@ -17,10 +17,13 @@ export default function Table() {
     return (
         <div className="w-100 vh-30 d-flex justify-content-center align-items-center">
             <div className="w-50">
-                <p>Number of users fetched: {users.length}</p> {/* Debugging */}
+                <p>Number of information fetched: {users.length}</p> {/* Debugging */}
                 <table className="table">
                     <thead>
                         <tr>
+                            <th>Index</th>
+                            <th>Date</th>
+                            <th>Time</th>
                             <th>Location</th>
                             <th>Reading</th>
                         </tr>
@@ -29,6 +32,9 @@ export default function Table() {
                         {
                             users.map(user => (
                                 <tr key={user._id}>
+                                    <td>{user.Index}</td>
+                                    <td>{user.Date}</td>
+                                    <td>{user.Time}</td>
                                     <td>{user.Location}</td>
                                     <td>{user.Readings}</td>
                                 </tr>
