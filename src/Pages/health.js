@@ -75,6 +75,16 @@ export default function Health() {  // Component name should start with uppercas
 
     return (
         <div>
+            <h1>
+            <img
+              src="health.png"
+              alt="Health"
+              width={70}
+              height={60}
+              className="mx-3"
+            />
+            System Health 
+            </h1>
             <Bar data={data} options={options} />
         </div>
     );

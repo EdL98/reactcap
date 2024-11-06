@@ -75,6 +75,16 @@ export default function Dashboard() {  // Component name should start with upper
 
     return (
         <div>
+            <h1>
+            <img
+              src="charts.png"
+              alt="Water Reading"
+              width={70}
+              height={60}
+              className="mx-3"
+            />
+            Water Reading Dashboard
+            </h1>
             <Bar data={data} options={options} />
         </div>
     );
