@@ -1,0 +1,17 @@
+.btn-contain {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* Optional: adds space between buttons */
+    font-size: 9px;   /* Set font size */
+    padding-left: 1.5rem;
+  }
+  
+button.selected{
+    background-color:paleturquoise;
+}
+
+li {
+  margin-right: 5px; /* Space to the right of each list item */
+  display: inline-block; /* Makes the list items appear horizontally */
+}
+

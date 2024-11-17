@@ -6,10 +6,12 @@ import {
     Tooltip,
     Legend
 } from 'chart.js';
-
+import { useTranslation } from 'react-i18next';
 import { Bar } from 'react-chartjs-2';
 import { useEffect, useState } from "react";
 import axios from 'axios';
+
+import "./health.css"
 
 // Register Chart.js components
 ChartJS.register(
@@ -20,9 +22,9 @@ ChartJS.register(
     Legend
 );
 
-export default function Health() {  // Component name should start with uppercase
+export default function Health() {  
     const [users, setUsers] = useState([]);
-
+    const{t}=useTranslation();
     useEffect(() => {
         axios.get('http://localhost:8000/getUsers')  // Node.js Express Server
             .then(response => {
@@ -83,9 +85,12 @@ export default function Health() {  // Component name should start with uppercas
               height={60}
               className="mx-3"
             />
-            System Health 
+            {t("sh")}
             </h1>
-            <Bar data={data} options={options} />
+            <div className='charthealth'>
+            <Bar data={data} options={options}  />
+            </div>
+            
         </div>
     );
 }

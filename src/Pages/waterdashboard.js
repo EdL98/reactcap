@@ -8,9 +8,10 @@ import {
 } from 'chart.js';
 
 import { Bar } from 'react-chartjs-2';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from "react";
 import axios from 'axios';
-
+import './waterdashboard.css'
 // Register Chart.js components
 ChartJS.register(
     BarElement,
@@ -20,16 +21,32 @@ ChartJS.register(
     Legend
 );
 
+
+
 export default function Dashboard() {  // Component name should start with uppercase
     const [users, setUsers] = useState([]);
-
+    const{t}=useTranslation();
     useEffect(() => {
-        axios.get('http://localhost:8000/getUsers')  // Node.js Express Server
-            .then(response => {
-                console.log("Fetched data:", response.data); // Debugging
-                setUsers(response.data);
-            })
-            .catch(err => console.log("Error fetching data:", err));
+        // Function to fetch data
+        const fetchData = () => {
+            axios.get('http://localhost:8000/getUsers') // Node.js Express Server
+                .then(response => {
+                    console.log("Fetched data:", response.data); // Debugging
+                    setUsers(response.data);
+                })
+                .catch(err => console.log("Error fetching data:", err));
+        };
+
+        // Initial data fetch
+        fetchData();
+
+        // Set up interval for refreshing data every second
+        const interval = setInterval(() => {
+            fetchData();
+        }, 1000);
+
+        // Clean up interval on component unmount
+        return () => clearInterval(interval);
     }, []);
 
     const data = {
@@ -83,9 +100,11 @@ export default function Dashboard() {  // Component name should start with upper
               height={60}
               className="mx-3"
             />
-            Water Reading Dashboard
+            {t("wrd")}
             </h1>
+            <div className='chartwater'>
             <Bar data={data} options={options} />
+            </div>
         </div>
     );
 }
