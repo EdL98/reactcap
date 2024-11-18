@@ -7,6 +7,7 @@ export default function Home(){
     const{t}=useTranslation();
     return (
         <Fragment>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <br/>
         <h1 ><strong><img src="shi.jpg" alt="Shimano Singapore" width="50" height="60" hspace="50"/>{' '}{t("background")}</strong></h1>
         <hr/>

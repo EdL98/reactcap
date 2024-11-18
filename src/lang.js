@@ -100,7 +100,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 home1:"Penyataan masalah",
                 proposed_solution:"Cadangan Penyelesaian",
                 problem_statement:"Meter air digunakan untuk mengukur isipadu air yang digunakan oleh entiti yang menggunakan air. Ia biasanya diletakkan pada titik di mana air memasuki harta benda, menyediakan cara pengukuran tepat penggunaan air untuk tujuan pengebilan dan pemantauan. Meter air biasanya dipaparkan dalam meter padu atau gelen.",
-                wm:"meter air",
+                wm:"Meter air",
                 water_meter:"Meter air digunakan untuk mengukur isipadu air yang digunakan oleh entiti yang menggunakan air. Ia biasanya diletakkan pada titik di mana air memasuki harta benda, menyediakan cara pengukuran tepat penggunaan air untuk tujuan pengebilan dan pemantauan. Meter air biasanya dipaparkan dalam meter padu atau gelen.",
                 challenges:"Cabaran Pembacaan Meter Air Manual",
                 time_consume:"Memakan Masa",
