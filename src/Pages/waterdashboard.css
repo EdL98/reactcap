@@ -9,3 +9,13 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width :768px){
+    strong{
+        font-size: 20px;
+    }
+    .chartwater{
+        width: 100%;
+    }
+    
+  }

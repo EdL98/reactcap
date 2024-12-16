@@ -15,3 +15,20 @@ li {
   display: inline-block; /* Makes the list items appear horizontally */
 }
 
+
+img {
+  border-radius: 5px; /* Optional: Add rounded corners to images */
+}
+
+@media (max-width :768px){
+  b{
+    font-size: 12px;
+  }
+  nav{
+    font-size:9px;
+  }
+  img{
+    max-width:50%;
+    height:auto;
+  }
+}

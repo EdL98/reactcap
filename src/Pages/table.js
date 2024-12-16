@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
+import './table.css'
 export default function Table() {
     const [users, setUsers] = useState([]);
     const{t}=useTranslation();
@@ -38,8 +39,9 @@ export default function Table() {
               width={70}
               height={60}
               className="mx-3"
-            />
+            /><strong>
             {t("WaterReadingTable")}
+            </strong>
             </h1>
                 <p>{t("noinfo")}: {users.length}</p> {/* Debugging */}
                 <table className="table">

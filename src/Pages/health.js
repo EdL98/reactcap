@@ -40,7 +40,7 @@ export default function Health() {
             {
                 label: 'Battery',
                 data: users.map(user => user.Battery),  // y-axis data
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                backgroundColor: 'orange',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }
@@ -78,6 +78,7 @@ export default function Health() {
     return (
         <div>
             <h1>
+            <strong>
             <img
               src="health.png"
               alt="Health"
@@ -86,6 +87,7 @@ export default function Health() {
               className="mx-3"
             />
             {t("sh")}
+            </strong>
             </h1>
             <div className='charthealth'>
             <Bar data={data} options={options}  />

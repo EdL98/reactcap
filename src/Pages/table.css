@@ -1,0 +1,15 @@
+@media (max-width :768px){
+    strong{
+        font-size: 26px;
+   
+            white-space: nowrap;
+       
+    }
+    th{
+        font-size:13px;
+    }
+    td{
+        font-size:13px;
+    }
+    
+  }

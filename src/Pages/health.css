@@ -9,3 +9,13 @@
             justify-content: center;
             align-items: center;
 }
+
+@media (max-width :768px){
+    h1{
+        font-size: 20px;
+    }
+    .charthealth{
+        width: 100%;
+    }
+    
+  }

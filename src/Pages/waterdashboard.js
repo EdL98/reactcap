@@ -23,7 +23,7 @@ ChartJS.register(
 
 
 
-export default function Dashboard() {  // Component name should start with uppercase
+export default function Dashboard() {  
     const [users, setUsers] = useState([]);
     const{t}=useTranslation();
     useEffect(() => {
@@ -74,7 +74,7 @@ export default function Dashboard() {  // Component name should start with upper
         },
         scales: {
             x: {
-                type: 'category',  // Set the x-axis type as 'category' explicitly
+                type: 'category', 
                 title: {
                     display: true,
                     text: 'Time'
@@ -89,7 +89,6 @@ export default function Dashboard() {  // Component name should start with upper
             }
         }
     };
-
     return (
         <div>
             <h1>
@@ -99,8 +98,9 @@ export default function Dashboard() {  // Component name should start with upper
               width={70}
               height={60}
               className="mx-3"
-            />
+            /><strong>
             {t("wrd")}
+            </strong>
             </h1>
             <div className='chartwater'>
             <Bar data={data} options={options} />

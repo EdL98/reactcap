@@ -35,3 +35,34 @@ align-items: "";
 margin-right: 15px;
 }
 
+li {
+    display: list-item;
+    list-style-position: inside;
+  }
+  ol li {
+    white-space: nowrap;
+  }
+  @media (max-width :768px){
+  
+    figcaption{
+        font-size: 8px;
+    }
+    div{
+        width:100%;
+        
+    }
+    p{
+      font-size: 9px;
+    }
+
+    img{
+      max-width:80%;
+      height:auto;
+    }
+    ol li {
+        white-space: wrap;
+      }
+    em{
+        font-size: 10px;
+    }
+  }

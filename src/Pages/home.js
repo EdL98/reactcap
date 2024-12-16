@@ -7,11 +7,8 @@ export default function Home(){
     const{t}=useTranslation();
     return (
         <Fragment>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <br/>
-        <h1 ><strong><img src="shi.jpg" alt="Shimano Singapore" width="50" height="60" hspace="50"/>{' '}{t("background")}</strong></h1>
+        <h1 ><strong classname="background"><img src="shi.jpg" alt="Shimano Singapore" width="50" height="60" hspace="50"/>{' '}{t("background")}</strong></h1>
         <hr/>
-        
         <div class="newdiv">
         <h2>{t("home1")}</h2>
   
@@ -34,8 +31,8 @@ export default function Home(){
                 </figure>
                 <div>
                 <p align="left">{t("water_meter")}</p>
-                <p align="middle"><strong>{t("challenges")}</strong></p>
-                <p align="middle">
+                <p align="middle"><b>{t("challenges")}</b></p>
+                <p align="left">
                 <ol>
                     <li>{t("time_consume")}</li>
                     <li>{t("error")}</li>
@@ -46,18 +43,18 @@ export default function Home(){
                 </div>
                 
                 <figure>
-                    <img src="oc.png" alt="Optical Character Recognition (OCR)" width="150" height="180" hspace="0"/>
-                    <figcaption align="Center"><em>{t("ocr")}</em><strong> (OCR)</strong></figcaption> 
+                    <img src="oc.png" alt="Optical Character Recognition (OCR)" width="150" height="180" hspace=""/>
+                    <figcaption align="Center"><em>{t("ocr")}</em><b> (OCR)</b></figcaption> 
                 </figure>
                 <figure>
                     <img src="opencv.png" alt="OpenCV" width="150" height="180" hspace="0"/>
-                    <figcaption align="Center"><em>{t("comvis")}</em> <strong> (OpenCV)</strong></figcaption> 
+                    <figcaption align="Center"><em>{t("comvis")}</em> <b> (OpenCV)</b></figcaption> 
                 </figure>
             
                 <div>
                     <p align="left">{t("desocr")}</p>
-                    <p align="center"><strong>{t("benefits")}</strong></p>
-                    <p align="center">
+                    <p align="center"><b>{t("benefits")}</b></p>
+                    <p align="left">
                     <ol>
                         <li>{t("inacc")}</li>
                         <li>{t("rtdc")}</li>
@@ -71,9 +68,8 @@ export default function Home(){
                 
             </div>
         </div>
-
-
 </Fragment>
-            
     );
 }
+
+
