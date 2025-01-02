@@ -21,12 +21,12 @@ ChartJS.register(
     Tooltip,
     Legend
 );
-
+// http://localhost:8000/getUsers
 export default function Health() {  
     const [users, setUsers] = useState([]);
     const{t}=useTranslation();
     useEffect(() => {
-        axios.get('http://localhost:8000/getUsers')  // Node.js Express Server
+        axios.get('https://backendserver3-hv88.onrender.com/getUsers')  // Node.js Express Server
             .then(response => {
                 console.log("Fetched data:", response.data); // Debugging
                 setUsers(response.data);

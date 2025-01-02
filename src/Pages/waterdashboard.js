@@ -29,7 +29,7 @@ export default function Dashboard() {
     useEffect(() => {
         // Function to fetch data
         const fetchData = () => {
-            axios.get('http://localhost:8000/getUsers') // Node.js Express Server
+            axios.get('https://backendserver3-hv88.onrender.com/getUsers') // Node.js Express Server
                 .then(response => {
                     console.log("Fetched data:", response.data); // Debugging
                     setUsers(response.data);
