@@ -13,3 +13,24 @@
     }
     
   }
+
+
+  .ExcelButton{
+    background-color: darkorange;
+    padding: 8px 8px;
+    text-align: center;
+    color: white;
+    margin-left: 30px;
+    margin-right: 60px;
+    border: none;
+    display: inline-block;
+  }
+
+
+
+.ButtonsOnly{
+    border-style: solid;
+    background-color: aquamarine;
+    border-color: aqua;
+    padding: 10px 15px;
+}

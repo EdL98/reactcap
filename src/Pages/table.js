@@ -1,11 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useTranslation } from 'react-i18next';
 import './table.css'
+import {useDownloadExcel} from 'react-export-table-to-excel';
+import {CSVLink} from 'react-csv';
+
+
 export default function Table() {
     const [users, setUsers] = useState([]);
     const{t}=useTranslation();
+    const tableref=useRef(null);
+    const {onDownload}=useDownloadExcel({
+        currentTableRef:tableref.current,
+        filename:`Water_Reading_Data`,
+        
+    })
+
+    const csvHeaders = [
+        { label: "Index", key: "Index" },
+        { label: "Date", key: "Date" },
+        { label: "Time", key: "Time" },
+        { label: "Location", key: "Location" },
+        { label: "Reading", key: "Readings" }
+    ];
+    
+
+
     useEffect(() => {
         // Function to fetch data
         const fetchData = () => {
@@ -44,7 +65,19 @@ export default function Table() {
             </strong>
             </h1>
                 <p>{t("noinfo")}: {users.length}</p> {/* Debugging */}
-                <table className="table">
+                
+                <section className="ButtonsOnly">
+                <button className="ExcelButton" onClick={onDownload}>Export to Excel</button>
+                <CSVLink
+                    data={users}
+                    headers={csvHeaders}
+                    filename="Water_Reading_Data.csv"
+                    className="btn btn-primary"style={{ marginLeft: '30px' }}
+                >
+                    Export to CSV
+                </CSVLink>
+                </section>
+                <table className="table" ref={tableref}>
                     <thead>
                         <tr>
                             <th>Index</th>
@@ -69,6 +102,7 @@ export default function Table() {
                     </tbody>
                 </table>
             </div>
+           
         </div>
     );
 }
