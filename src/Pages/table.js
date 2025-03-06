@@ -84,8 +84,8 @@ export default function Table() {
                             <th>Date</th>
                             <th>Time</th>
                             <th>Location</th>
-                            <th>Reading</th>
-                            <th>Consumption</th>
+                            <th>Reading (m3) </th>
+                            <th>Consumption (m3)</th>
                         </tr>
                     </thead>
                     <tbody>
