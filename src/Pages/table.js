@@ -80,24 +80,24 @@ export default function Table() {
                 <table className="table" ref={tableref}>
                     <thead>
                         <tr>
-                            <th>Index</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Location</th>
-                            <th>Reading (m3) </th>
-                            <th>Consumption (m3)</th>
+                            <th><center>Index</center></th>
+                            <th><center>Date</center></th>
+                            <th><center>Time</center></th>
+                            <th><center>Location</center></th>
+                            <th><center>Reading (m3) </center></th>
+                            <th><center>Consumption (m3)</center></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             users.map((user,index) => (
                                 <tr key={user._id}>
-                                    <td>{user.Index}</td>
-                                    <td>{user.Date}</td>
-                                    <td>{user.Time}</td>
-                                    <td>{user.Location}</td>
-                                    <td>{user.Readings}</td>
-                                    <td>{index > 0 ? -(users[index - 1].Readings - user.Readings) : 0}</td> 
+                                    <td><center>{user.Index}</center></td>
+                                    <td><center>{user.Date}</center></td>
+                                    <td><center>{user.Time}</center></td>
+                                    <td><center>{user.Location}</center></td>
+                                    <td><center>{user.Readings}</center></td>
+                                    <td><center>{index > 0 ? -(users[index - 1].Readings - user.Readings) : 0}</center></td> 
                                 </tr>
                             ))
                         }
