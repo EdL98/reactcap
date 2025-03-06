@@ -85,17 +85,19 @@ export default function Table() {
                             <th>Time</th>
                             <th>Location</th>
                             <th>Reading</th>
+                            <th>Consumption</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            users.map(user => (
+                            users.map((user,index) => (
                                 <tr key={user._id}>
                                     <td>{user.Index}</td>
                                     <td>{user.Date}</td>
                                     <td>{user.Time}</td>
                                     <td>{user.Location}</td>
                                     <td>{user.Readings}</td>
+                                    <td>{index > 0 ? -(users[index - 1].Readings - user.Readings) : user.Readings}</td> 
                                 </tr>
                             ))
                         }
