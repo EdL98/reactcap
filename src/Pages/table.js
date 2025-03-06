@@ -97,7 +97,7 @@ export default function Table() {
                                     <td>{user.Time}</td>
                                     <td>{user.Location}</td>
                                     <td>{user.Readings}</td>
-                                    <td>{index > 0 ? -(users[index - 1].Readings - user.Readings) : user.Readings}</td> 
+                                    <td>{index > 0 ? -(users[index - 1].Readings - user.Readings) : 0}</td> 
                                 </tr>
                             ))
                         }
